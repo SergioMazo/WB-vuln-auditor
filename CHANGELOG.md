@@ -23,6 +23,8 @@ and the project intends to use [Semantic Versioning](https://semver.org/).
 - Added explicit request timeouts and safer error reporting
 - Prevented Shodan API keys from being embedded directly in constructed URLs
 - Replaced broad exception handling with targeted failure paths
+- Clarified that every operator supplies their own Shodan key and that
+  host-search access depends on the account's current plan and query credits
 - Clarified the exact meaning and limitations of reported results
 - Added dependency compatibility ranges
 

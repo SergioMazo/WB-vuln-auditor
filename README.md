@@ -79,8 +79,14 @@ from `.env.example`, source it explicitly and never commit it.
 Requirements:
 
 - Python 3.10 or newer
-- A Shodan API key with access to host search
+- Your own Shodan API key with access to host search
 - Network access to Shodan and the explicitly authorized target devices
+
+Every operator must use their own Shodan account and API key. This repository
+does not include, share, or pay for a key. Shodan provides an API key when an
+account is created, but this project's filtered host search uses query credits.
+Actual search access, quotas, and result limits therefore depend on the
+operator's current Shodan account and plan.
 
 Install only the two runtime dependencies:
 
@@ -177,6 +183,14 @@ test that rejects tracked RFC 1918 address literals. See
 [Security model](docs/security-model.md).
 
 ## FAQ
+
+### Do I need my own Shodan API key?
+
+Yes. The repository never supplies or shares a Shodan credential. Create or use
+your own Shodan account, obtain its API key, and confirm that the account has
+host-search access and enough query credits. A free account can provide an API
+key, but whether its current entitlements are sufficient for this filtered
+search is controlled by Shodan and may change.
 
 ### Does this exploit WattBox devices?
 

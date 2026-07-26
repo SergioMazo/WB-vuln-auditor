@@ -19,8 +19,11 @@ jobs:
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
+          # Shodan blocks automated GitHub-hosted checks with HTTP 403.
+          # Keep the human-facing acknowledgement link and exclude only it.
           args: >-
             --no-progress
             --accept 200,429
+            --exclude "^https://www\\.shodan\\.io/?$"
             "**/*.md"
           fail: true

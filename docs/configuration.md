@@ -3,6 +3,14 @@
 ## Shodan API key
 
 The only runtime setting read from the environment is `SHODAN_API_KEY`.
+Each operator must supply a key from their own Shodan account. The project does
+not bundle, share, or sponsor API access.
+
+Shodan provides an API key when an account is created. However, the scanner's
+`wattbox port:80` query contains a filter and therefore uses Shodan query
+credits. Host-search availability, quotas, and result limits depend on the
+account's current plan and credits; a free account is not guaranteed to be
+sufficient. Confirm the account's API entitlements before running the tool.
 
 Export it for the current shell:
 
