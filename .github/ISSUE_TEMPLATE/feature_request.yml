@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose a narrow defensive improvement.
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Brute force, exploitation, stealth, evasion, arbitrary port scanning,
+        and unauthorized mass targeting are out of scope.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Operator problem
+      description: What authorized defensive workflow needs improvement?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Authorization and safety impact
+      description: Explain why the change does not widen offensive capability.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: The proposal preserves the project's narrow defensive purpose.
+          required: true
