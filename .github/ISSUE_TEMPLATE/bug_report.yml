@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a reproducible defect using sanitized, synthetic data.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never include API keys, real targets, generated CSV files, credentials,
+        or client data. Security vulnerabilities belong in private reporting.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v0.1.0 or commit hash
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version and operating system
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Use only sanitized output and synthetic addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Offline reproduction
+      description: Provide the smallest network-free reproduction possible.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed credentials, real targets, and client data.
+          required: true
+        - label: This report does not disclose a security vulnerability.
+          required: true
